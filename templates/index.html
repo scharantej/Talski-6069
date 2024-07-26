@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Australian Sayings Translator</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1>Australian Sayings Translator</h1>
+<form action="/translate" method="post">
+<div class="form-group">
+<label for="english_text">Enter Australian sayings (one per line):</label>
+<textarea class="form-control" id="english_text" name="english_text" rows="5"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Translate</button>
+</form>
+
+{% if dutch_text %}
+<br>
+<div class="alert alert-success">
+<strong>Dutch Translation:</strong>
+<pre>{{ dutch_text }}</pre>
+</div>
+{% endif %}
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
